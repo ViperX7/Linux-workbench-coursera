@@ -2,7 +2,7 @@ all: README.md
 
 README.md: guessinggame.sh
 	
-	echo "# The Unix Workbench" > README.md
+	echo "# The Unix Workbench (Guessing Game)" > README.md
 	echo -n "> Utkarsh Yadav | " >>README.md
 	date '+%b %d %Y' >>README.md
 	echo "---" >> README.md
