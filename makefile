@@ -1,3 +1,5 @@
+all: README.md
+
 README.md: guessinggame.sh
 	
 	echo "# The Unix Workbench" > README.md
@@ -15,3 +17,5 @@ README.md: guessinggame.sh
 	echo  "\`\`\`bash" >> README.md
 	cat guessinggame.sh >>README.md
 	echo -n "\`\`\`" >> README.md
+clean:
+	rm README.md
