@@ -8,17 +8,18 @@
 **Number of lines in guessinggame.sh:** 
 22
 
-**Build date:** Thu 11 Jun 2020 07:33:06 PM IST
+**Build date:** Thu 11 Jun 2020 07:50:54 PM IST
 
 ```bash
 #!/bin/env bash
 
 f_count=$(ls |wc -l)
-
-echo Guess the number of files and folders in current directory
-echo -n "[ > ] "
-read user_inp
-
+ask(){
+    echo Guess the number of files and folders in current directory
+    echo -n "[ > ] "
+    read user_inp
+}
+ask
 while [[ $user_inp -ne $f_count ]]
 do
     if [[ $user_inp -lt $f_count ]]
@@ -27,9 +28,8 @@ do
     else
         echo "Guess too High try a lower Number: "
     fi
-
-    echo -n "[ > ] "
-    read user_inp
+    
+    ask
 done
 
 echo Your Guess is correct
